@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Disaster Alert Dashboard</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <!-- MarkerCluster CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <header class="dashboard-header">
+    <div class="header-content">
+      <h1>Global Disaster Alert Dashboard</h1>
+      <p>Stay informed, Stay safe</p>
+    </div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search by location or type..." />
+      <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="alerts-section">
+      <h2>Live Earthquake Alerts</h2>
+      <div id="alertList" class="alert-list">
+        <!-- Earthquake alerts will be injected here by JS -->
+      </div>
+    </section>
+
+    <section class="map-section">
+      <div id="map"></div>
+      <div class="map-legend">
+        <div class="legend-item"><span class="quake"></span> Earthquake</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>⚠️ Stay Safe - Real-time Disaster Alerts<br>&copy; 2025 Global Disaster Alert Dashboard</p>
+  </footer>
+
+  <!-- Loading indicator -->
+  <div id="loadingIndicator">Loading alerts...</div>
+
+  <!-- Preparedness Tips Modal -->
+  <div id="modal" class="modal">
+    <div id="modalContent" class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <!-- Preparedness tips will be injected here by JS -->
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <!-- MarkerCluster JS -->
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
